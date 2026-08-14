@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.duniaops.com">
-    <img src="https://www.duniaops.com/assets/logo-lockup.png" alt="DuniaOps" width="220">
+    <img src="https://www.duniaops.com/assets/logo-lockup.png?v=20260814-fixed-alpha" alt="DuniaOps" width="220">
   </a>
 
   <h1>Enterprise-grade software, delivered at startup speed.</h1>
