@@ -1,7 +1,4 @@
 <div align="center">
-  <a href="https://www.duniaops.com">
-    <img src="./assets/duniaops-logo-transparent.png" alt="DuniaOps" width="420">
-  </a>
 
   <h1>Enterprise-grade software, delivered at startup speed.</h1>
 
