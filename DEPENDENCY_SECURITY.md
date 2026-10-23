@@ -37,6 +37,19 @@ select it when creating the repo. Organization security defaults do not install
 workflow files automatically. Repositories without Node declarations need no
 Node job. Archived repositories stay archived and are excluded from updates.
 
+## Owner action: enable Actions
+
+At rollout, GitHub Actions was disabled at the organization level. It was not
+enabled without a separate owner decision. The new daily checks cannot execute
+until Actions is enabled, even after the PRs merge. Under organization Settings
+> Actions > General, permit Actions for the intended repositories and allow the
+DuniaOps reusable workflow plus the official GitHub checkout/setup-node actions.
+Keep the existing $0 Actions budget and blocked paid usage. The shared workflow
+uses standard Linux runners only. Existing application workflows may also become
+eligible to run when Actions is enabled; review their usage before switching it on.
+No additional CLI permission, credential, subscription or third-party app is needed
+for the Node checker itself.
+
 ## Free organization defaults
 
 `scripts/configure-free-security.py` audits settings by default. Explicit
