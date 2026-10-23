@@ -1,0 +1,30 @@
+name: Node runtime security
+
+on:
+  pull_request:
+    paths:
+      - '.nvmrc'
+      - '.node-version'
+      - '**/Dockerfile*'
+      - '**/netlify.toml'
+      - '**/package.json'
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '.nvmrc'
+      - '.node-version'
+      - '**/Dockerfile*'
+      - '**/netlify.toml'
+      - '**/package.json'
+      - '.github/workflows/**'
+  schedule:
+    - cron: '31 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  runtime:
+    uses: duniaops/.github/.github/workflows/node-runtime.yml@main
