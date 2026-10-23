@@ -1,0 +1,14 @@
+{
+  "name": "DuniaOps Node runtime security",
+  "description": "Free daily Node security and support checks; human review before runtime updates.",
+  "categories": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "filePatterns": [
+    "package.json$",
+    ".nvmrc$",
+    "Dockerfile$",
+    "netlify.toml$"
+  ]
+}

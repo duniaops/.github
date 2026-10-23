@@ -1,0 +1,26 @@
+name: Node runtime security
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: duniaops/.github
+          ref: main
+          path: .duniaops-node-policy
+          sparse-checkout: scripts
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          check-latest: true
+      - run: node .duniaops-node-policy/scripts/check-node-runtime.mjs
