@@ -1,0 +1,23 @@
+name: Validate runtime policy
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 7 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          check-latest: true
+      - run: node --test scripts/check-node-runtime.test.mjs
+      - run: node scripts/check-node-runtime.mjs
